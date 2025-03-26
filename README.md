@@ -42,20 +42,20 @@ Execute the compiled binary:
 
 ### **Subnet Calculation Example**  
 ```
-Enter IPv4 address (e.g., 192.168.1.0): 192.168.1.0
-Enter CIDR notation (e.g., 24 for /24): 24
-Enter the number of subnets to divide into: 4
+Enter IPv4 address (e.g., 192.168.1.0): 10.0.0.0
+Enter CIDR notation (e.g., 24 for /24): 4
+Enter number of subnets to divide into: 4
+WARNING: 10.0.0.0/8 is a private network. Cannot be used on public internet (RFC 1918).
 
-Subnet 1:
-Network Address: 192.168.1.0
-Host Range: 192.168.1.1 - 192.168.1.62
-Broadcast Address: 192.168.1.63
+New Subnet Mask: /26
+-----------------------------------------------------------------------------
+Subnet         Network Address   Host Range                 Broadcast Address    
+-----------------------------------------------------------------------------
+Subnet 1       10.0.0.0          10.0.0.1 - 10.0.0.62       10.0.0.63            
+Subnet 2       10.0.0.64         10.0.0.65 - 10.0.0.126     10.0.0.127           
+Subnet 3       10.0.0.128        10.0.0.129 - 10.0.0.190    10.0.0.191           
+Subnet 4       10.0.0.192        10.0.0.193 - 10.0.0.254    10.0.0.255           
 
-Subnet 2:
-Network Address: 192.168.1.64
-Host Range: 192.168.1.65 - 192.168.1.126
-Broadcast Address: 192.168.1.127
-...
 ```
 
 ---
